@@ -3,7 +3,9 @@ from django.shortcuts import render, redirect
 from .forms import SignUpForm, ProfileForm
 from django.shortcuts import render
 from django.template import RequestContext
-
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
+from django.urls import reverse
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 from .models import *
@@ -25,17 +27,19 @@ def signup(request):
             
             username = user_form.cleaned_data.get('username')
             raw_password = user_form.cleaned_data.get('password')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
-            return HttpResponseRedirect('/accounts/profile.html')
-    
+            user = user_form.save()
+            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            HttpResponseRedirect('profile.html')
+            # was able to get a user to succesfullly create a profile by ommitting the return above
+            # the return above was ending the loop too early - making profile unable to create
+   
     user_form = SignUpForm()
     profile_form = ProfileForm()
     return render(request, 'registration/signup.html',  
-        {
-            'user_form': user_form, 
-            'profile_form': profile_form
-        })
+            { 
+                'user_form': user_form, 
+                'profile_form': profile_form
+            })
 
 
 
