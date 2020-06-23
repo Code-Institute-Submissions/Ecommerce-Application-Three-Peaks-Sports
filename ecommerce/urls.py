@@ -46,5 +46,6 @@ urlpatterns = [
     path('accounts/signup/', signup, name='signup'),
     path('accounts/profile/', show_profile, name='profile'),
     path('media/<path:path>', serve, {'document_root': MEDIA_ROOT}),
- ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('avatar/', include('avatar.urls')),
 
+ ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

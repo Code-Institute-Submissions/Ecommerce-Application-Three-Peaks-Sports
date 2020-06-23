@@ -23,11 +23,13 @@ def signup(request):
             user = user_form.save()
             profile = profile_form.save(commit=False)
             profile.user = user
-            profile.save()
-            
+          
+            user_avatar = models.ImageField(upload_to='media/avatars/') 
             username = user_form.cleaned_data.get('username')
             raw_password = user_form.cleaned_data.get('password')
             user = user_form.save()
+          
+            profile.save()
             login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             HttpResponseRedirect('profile.html')
             # was able to get a user to succesfullly create a profile by ommitting the return above

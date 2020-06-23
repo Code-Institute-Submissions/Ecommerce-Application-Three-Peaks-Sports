@@ -11,8 +11,12 @@ p.t {font-weight:bold;
 </head>
 
 {% endblock style%}
-
+{% load avatar_tags %}
 {% block content %}
+<div class="container">
+{% avatar user 65 class="img-circle img-responsive" id="user_avatar" %}
+</div>
+
 <div class="container">
 <h3 style='padding-left=40px'> Profile</h3>
 				<div class="row">
@@ -26,6 +30,9 @@ p.t {font-weight:bold;
 <li><p class="t"> Last name:{{ user.last_name }}</p></li>
 <li><p class="t"> Date joined: {{user.date_joined}}</p></li> 
 <li><p class="t"> Last Login: {{user.last_login}}</p></li>
+
+<li><a href="{% url 'avatar_change' %}">Change your avatar</a></li>
+
 </ul>
 </div>
 </div>

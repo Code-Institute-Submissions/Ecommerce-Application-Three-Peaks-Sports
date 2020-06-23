@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Profile(models.Model):
-    image = models.ImageField(upload_to="avatars", default="avatars/anonymous.png", null=False, blank=False)
+    image = models.ImageField(upload_to="media/avatars", default="media/avatars/anonymous.png", null=False, blank=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="profile")
     
     objects = models.Manager()
