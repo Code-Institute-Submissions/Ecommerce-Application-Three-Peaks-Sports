@@ -12,10 +12,14 @@ from django.utils.crypto import get_random_string
 
 ARN_bucket = 'arn:aws:s3:::mybucket-last'
   
-# Add a new environment variable  
-os.environ['AWS_ACCESS_KEY_ID'] = 'AKIAT2JWHGMKESRDYD25'
-os.environ['AWS_SECRET_ACCESS_KEY'] = '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'
+# Adding AWS environment variables  
+os.environ['AWS_ACCESS_KEY_ID'] = 'AKIAJC5MXPVGAAVBSUFQ'
+os.environ['AWS_SECRET_ACCESS_KEY'] = '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'
 
+# Adding STRIPE environment variables
+
+os.environ['STRIPE_PUBLISHABLE_KEY'] = 'pk_test_7tl7qCi6l6VwSfyaqUmbh1lQ'
+os.environ['STRIPE_SECRET_KEY'] = 'sk_test_b1nb09QpEo8rT380EK52VXpw'
 
 chars = 'amnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
 SECRET_KEY = get_random_string(50, chars)

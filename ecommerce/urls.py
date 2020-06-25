@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.static import serve
 from django.conf import settings
-from accounts.views import signup, show_profile
+# from accounts.views import signup, show_profile
 from products.views import product_list, product_detail
 from cart.views import add_to_cart, remove_from_cart, view_cart
 from checkout.views import show_checkout, submit_payment
@@ -30,6 +30,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from  .settings.local import *
+from accounts.views import login, signup, profile, logout
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -41,11 +42,13 @@ urlpatterns = [
     path('cart/view/', view_cart, name='view_cart'),
     path('checkout/view/', show_checkout, name='show_checkout'),
     path('checkout/pay/', submit_payment, name='submit_payment'),
-
+    path('login/', login, name='login'),
+    path('login/seller', signup, name='signup'),
+    path('profile/', profile, name='profile'),
+    path('logout/', logout, name='logout'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/signup/', signup, name='signup'),
-    path('accounts/profile/', show_profile, name='profile'),
+    path('accounts/profile/', profile, name='profile'),
     path('media/<path:path>', serve, {'document_root': MEDIA_ROOT}),
-    path('avatar/', include('avatar.urls')),
 
  ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
