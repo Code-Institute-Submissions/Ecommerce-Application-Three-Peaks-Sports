@@ -40,9 +40,9 @@ def signup(request):
             profile.user = user
             profile.save()
             
-            u = user_form.cleaned_data['username']
-            p = user_form.cleaned_data['password1']
-            user = authenticate(username=u, password=p)
+            username_input = user_form.cleaned_data['username']
+            password_input = user_form.cleaned_data['password1']
+            user = authenticate(username=username_input, password=password_input)
             
             if user is not None:
                 auth.login(request, user)
