@@ -53,7 +53,7 @@ def signup(request):
         user_form = UserRegistrationForm()
         profile_form = ProfileRegistrationForm()
 
-    return render(request, "signup.html", {'form': user_form, 'profile_form': profile_form})
+    return render(request, "accounts/signup.html", {'form': user_form, 'profile_form': profile_form})
     
     
     
