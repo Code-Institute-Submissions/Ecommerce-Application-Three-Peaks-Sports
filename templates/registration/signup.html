@@ -2,13 +2,13 @@
 {% load bootstrap_tags %}
 
 {% block content %}
-  <h2>Sign up</h2>
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    
-    {{ user_form | as_bootstrap }}
-    {{ profile_form | as_bootstrap }}
+ <h1>Register</h1>
+<form method = 'POST' enctype='multipart/form-data'>
+   {% csrf_token %}
+   {{ form | as_bootstrap }}
+   {{ profile_form | as_bootstrap }}
+    <input type="submit" value="Submit"/>
+</form>
 
-    <button type="submit">Sign up</button>
-  </form>
-{% endblock %}
+
+{% endblock content %}
