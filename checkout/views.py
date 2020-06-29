@@ -95,5 +95,3 @@ def submit_payment(request):
         return redirect("/")
     else:
         messages.error(request, "There was an error charging your card")
-
-

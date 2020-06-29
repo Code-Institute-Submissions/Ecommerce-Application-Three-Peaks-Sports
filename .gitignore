@@ -7,3 +7,6 @@ keys.py
 __pycache__
 ecommerce.__pycache__
 ecommerce.settings.__pycache__
+
+ecommerce.settings.dev
+ecommerce/settings/dev.py

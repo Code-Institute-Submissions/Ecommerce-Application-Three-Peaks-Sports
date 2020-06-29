@@ -13,8 +13,8 @@ from django.utils.crypto import get_random_string
 ARN_bucket = 'arn:aws:s3:::mybucket-last'
   
 # Adding AWS environment variables  
-os.environ['AWS_ACCESS_KEY_ID'] = 'AKIAJC5MXPVGAAVBSUFQ'
-os.environ['AWS_SECRET_ACCESS_KEY'] = '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'
+os.environ['AWS_ACCESS_KEY_ID'] = 'AKIAIHE5IC2KRZIREABA'
+os.environ['AWS_SECRET_ACCESS_KEY'] = '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'
 
 # Adding STRIPE environment variables
 
