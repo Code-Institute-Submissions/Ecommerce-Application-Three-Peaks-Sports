@@ -19,3 +19,9 @@ ecommerce/settings/dev
 __pycache__
 *.sqlite3
 *myports
+Procfile
+custom_storages.py
+
+*auth_user
+*.json
+myports.txt

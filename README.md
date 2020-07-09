@@ -142,8 +142,8 @@ The Header sometimes fails to update status (login successful), but will update 
 
 <h3> <b> Acknowledgments </b> </h3>
 
-<h6>Credit to Richard Dalton For providing a preliminary project structure and basic guidelines 
-(from https://github.com/richardadalton/com-devjoy-ecommerce) and for Haley Shaffer for providing guidelines on how to have different Django user types on the Django application (https://github.com/hschafer2017/django-UserTypes)
+<h6>Credit to <a href='https://github.com/richardadalton/com-devjoy-ecommerce'> Richard Dalton </a> For providing a preliminary project structure and basic guidelines 
+and for <a href='https://github.com/hschafer2017/django-UserTypes'> Haley Shaffer </a> for providing guidelines on how to have different Django user types on the Django application 
 </h6> 
 
 
