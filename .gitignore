@@ -1,7 +1,7 @@
 media
 ˜/virtualenvs/ecommerce-1
 last_env/
-Users
+Users/
 settings.dev
 settings.base
 keys.py
@@ -9,10 +9,14 @@ __pycache__
 ecommerce.__pycache__
 ecommerce.settings.__pycache__
 venv/
+last_env/
 ecommerce.settings.dev
 ecommerce/settings/dev.py
 logfile
 ecommerce/settings/dev
 .env
-
+.vscode
 .DS_store
+__pycache__
+*.sqlite3
+*myports
