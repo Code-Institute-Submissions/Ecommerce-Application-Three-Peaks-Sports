@@ -98,7 +98,7 @@ The command above will update the requirements.txt file to include any packages 
 
 1. Download or pull the repository 
 
-2. Create a new Virtual Environment for the project. You can follow this useful guide on how to do it:  <b> <a href='https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/ '> How to create new Virtual Environment</b>
+2. Create a new Virtual Environment for the project. You can follow this useful guide on how to do it:  <b> <a href='https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/ '> How to create new Virtual Environment</b></a>
 
 
 3. Install all requirements and packages

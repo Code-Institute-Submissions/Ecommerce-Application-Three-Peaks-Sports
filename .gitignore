@@ -21,7 +21,9 @@ __pycache__
 *myports
 Procfile
 custom_storages.py
-
-*auth_user
+.sass-cache
+*.json
+!spec/*.json
+auth_user.json
 *.json
 myports.txt
